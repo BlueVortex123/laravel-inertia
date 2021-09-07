@@ -106,6 +106,8 @@ class AssemblyController extends Controller
      */
     public function destroy(Assembly $assembly)
     {
-        //
+        
+        $assembly->delete();
+        return back();
     }
 }

@@ -66,6 +66,11 @@ __webpack_require__.r(__webpack_exports__);
   },
   props: {
     assemblies: []
+  },
+  methods: {
+    submit: function submit(id) {
+      _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__.Inertia["delete"]("/assemblies/".concat(id));
+    }
   }
 });
 
@@ -339,7 +344,13 @@ var render = function() {
                               "button",
                               {
                                 staticClass: "btn btn-danger btn-sm ml-1",
-                                attrs: { type: "submit" }
+                                attrs: { type: "submit" },
+                                on: {
+                                  click: function($event) {
+                                    $event.preventDefault()
+                                    return _vm.submit("" + assembly.id)
+                                  }
+                                }
                               },
                               [_vm._v("Delete")]
                             )

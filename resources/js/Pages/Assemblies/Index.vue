@@ -23,7 +23,7 @@
                                 <td>{{ assembly.address }}</td>
                                 <td class="row mx-auto"> 
                                     <Link :href="`/assemblies/${assembly.id}/edit`" class="btn btn-secondary btn-sm">Edit</Link>                                    
-                                    <button type="submit" class="btn btn-danger btn-sm ml-1">Delete</button>
+                                    <button type="submit" @click.prevent="submit(`${assembly.id}`)" class="btn btn-danger btn-sm ml-1">Delete</button>
                                 </td>
                             </tr>
                         </tbody>
@@ -51,6 +51,12 @@ export default {
     },
     props: {
         assemblies: []
+    },
+
+    methods: {
+        submit(id) {
+            Inertia.delete(`/assemblies/${id}`)
+        },
     },
     
 }
