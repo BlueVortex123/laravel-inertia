@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::resource('/assemblies', \App\Http\Controllers\AssemblyController::class);
+Route::resource('/builings', \App\Http\Controllers\BuildingController::class);
 
 Route::get('{any}', function () {
     return Inertia::render('app');
