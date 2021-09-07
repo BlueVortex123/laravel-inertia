@@ -1,5 +1,6 @@
 <?php
 
+use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,7 +13,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::resource('/assemblies', \App\Http\Controllers\AssemblyController::class);
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('{any}', function () {
+    return Inertia::render('app');
+})->where('any', '.*');
