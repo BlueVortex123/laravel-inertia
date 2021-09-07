@@ -6,6 +6,7 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-9">
+                    <Link href="/assemblies/create" class="button btn-primary btn-sm float-md-right">Create Article</Link>
                     <table class="table" v-if="assemblies.length">
                         <thead class="thead-light">
                             <tr>

@@ -28,7 +28,12 @@ class AssemblyController extends Controller
      */
     public function create()
     {
-        //
+        $assemblies = Assembly::all();
+
+
+        return Inertia::render('Assemblies/Create',[
+            'assemblies' => $assemblies
+        ]);
     }
 
     /**
@@ -39,7 +44,15 @@ class AssemblyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Assembly::create(
+            $request->validate([
+                'name' => 'bail|required|string|min:3|max:255',
+                'address' => 'required|string|min:3|max:255'
+            ])
+        );
+
+            return redirect()->route('assemblies.index');
+    
     }
 
     /**
