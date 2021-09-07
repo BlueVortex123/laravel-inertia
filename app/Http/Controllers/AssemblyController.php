@@ -74,7 +74,9 @@ class AssemblyController extends Controller
      */
     public function edit(Assembly $assembly)
     {
-        //
+        return Inertia::render('Assemblies/Edit',[
+            'assembly' => $assembly
+        ]);
     }
 
     /**
@@ -86,7 +88,14 @@ class AssemblyController extends Controller
      */
     public function update(Request $request, Assembly $assembly)
     {
-        //
+        $assembly->update(
+            $request->validate([
+                'name' => 'bail|required|string|min:3|max:255|unique:assemblies,name,'.$assembly->id,
+                'address' => 'bail|required|string|min:3|max:255'
+            ])
+        );
+
+        return redirect()->route('assemblies.index');
     }
 
     /**

@@ -20,9 +20,9 @@
                             <tr v-for="assembly in assemblies" :key="assembly.id">
                                 <td>{{ assembly.id }}</td>
                                 <td>{{ assembly.name }}</td>
-                                <td>{{ assembly.name }}</td>
+                                <td>{{ assembly.address }}</td>
                                 <td class="row mx-auto"> 
-                                    <button type="submit" class="btn btn-secondary btn-sm">Edit</button>
+                                    <Link :href="`/assemblies/${assembly.id}/edit`" class="btn btn-secondary btn-sm">Edit</Link>                                    
                                     <button type="submit" class="btn btn-danger btn-sm ml-1">Delete</button>
                                 </td>
                             </tr>

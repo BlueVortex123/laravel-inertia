@@ -55466,6 +55466,14 @@ var map = {
 		"./resources/js/Pages/Assemblies/Create.vue",
 		"resources_js_Pages_Assemblies_Create_vue"
 	],
+	"./Assemblies/Edit": [
+		"./resources/js/Pages/Assemblies/Edit.vue",
+		"resources_js_Pages_Assemblies_Edit_vue"
+	],
+	"./Assemblies/Edit.vue": [
+		"./resources/js/Pages/Assemblies/Edit.vue",
+		"resources_js_Pages_Assemblies_Edit_vue"
+	],
 	"./Assemblies/Index": [
 		"./resources/js/Pages/Assemblies/Index.vue",
 		"resources_js_Pages_Assemblies_Index_vue"
@@ -55611,7 +55619,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_Pages_Assemblies_Create_vue":1,"resources_js_Pages_Assemblies_Index_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_Pages_Assemblies_Create_vue":1,"resources_js_Pages_Assemblies_Edit_vue":1,"resources_js_Pages_Assemblies_Index_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};
