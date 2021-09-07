@@ -435,9 +435,9 @@ var render = function() {
                         "Link",
                         {
                           staticClass: "nav-link",
-                          attrs: { href: "/assemblies/create" }
+                          attrs: { href: "/builings" }
                         },
-                        [_vm._v("Create Article")]
+                        [_vm._v("buildings")]
                       )
                     ],
                     1

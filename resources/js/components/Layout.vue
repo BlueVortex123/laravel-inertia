@@ -14,7 +14,7 @@
                             <Link href="/assemblies" class="nav-link">Articles</Link>
                         </li>
                         <li class="nav-item">
-                            <Link href="/assemblies/create" class="nav-link">Create Article</Link>
+                            <Link href="/builings" class="nav-link">buildings</Link>
                         </li>
                     </ul>
                 </div>

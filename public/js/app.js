@@ -55481,6 +55481,30 @@ var map = {
 	"./Assemblies/Index.vue": [
 		"./resources/js/Pages/Assemblies/Index.vue",
 		"resources_js_Pages_Assemblies_Index_vue"
+	],
+	"./Buildings/Create": [
+		"./resources/js/Pages/Buildings/Create.vue",
+		"resources_js_Pages_Buildings_Create_vue"
+	],
+	"./Buildings/Create.vue": [
+		"./resources/js/Pages/Buildings/Create.vue",
+		"resources_js_Pages_Buildings_Create_vue"
+	],
+	"./Buildings/Edit": [
+		"./resources/js/Pages/Buildings/Edit.vue",
+		"resources_js_Pages_Buildings_Edit_vue"
+	],
+	"./Buildings/Edit.vue": [
+		"./resources/js/Pages/Buildings/Edit.vue",
+		"resources_js_Pages_Buildings_Edit_vue"
+	],
+	"./Buildings/Index": [
+		"./resources/js/Pages/Buildings/Index.vue",
+		"resources_js_Pages_Buildings_Index_vue"
+	],
+	"./Buildings/Index.vue": [
+		"./resources/js/Pages/Buildings/Index.vue",
+		"resources_js_Pages_Buildings_Index_vue"
 	]
 };
 function webpackAsyncContext(req) {
@@ -55619,7 +55643,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_Pages_Assemblies_Create_vue":1,"resources_js_Pages_Assemblies_Edit_vue":1,"resources_js_Pages_Assemblies_Index_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_Pages_Assemblies_Create_vue":1,"resources_js_Pages_Assemblies_Edit_vue":1,"resources_js_Pages_Assemblies_Index_vue":1,"resources_js_Pages_Buildings_Create_vue":1,"resources_js_Pages_Buildings_Edit_vue":1,"resources_js_Pages_Buildings_Index_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

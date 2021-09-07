@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Building;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class BuildingController extends Controller
 {
@@ -14,7 +15,11 @@ class BuildingController extends Controller
      */
     public function index()
     {
-        //
+        $buildings = Building::with('assembly')->get();
+
+        return Inertia::render('Buildings/Index',[
+            'buildings' => $buildings
+        ]);
     }
 
     /**
