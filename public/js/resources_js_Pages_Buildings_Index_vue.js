@@ -62,11 +62,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   props: {
     buildings: []
-  },
-  data: function data() {
-    return {
-      message: ''
-    };
   }
 });
 
@@ -331,25 +326,32 @@ var render = function() {
                         _vm._v(" "),
                         _c("td", [_vm._v(_vm._s(building.no_floors))]),
                         _vm._v(" "),
-                        _c("td", { staticClass: "row mx-auto" }, [
-                          _c(
-                            "a",
-                            {
-                              staticClass: "btn btn-secondary btn-sm",
-                              attrs: { href: "#" }
-                            },
-                            [_vm._v("Edit")]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-danger btn-sm ml-1",
-                              attrs: { type: "submit" }
-                            },
-                            [_vm._v("Delete")]
-                          )
-                        ])
+                        _c(
+                          "td",
+                          { staticClass: "row mx-auto" },
+                          [
+                            _c(
+                              "Link",
+                              {
+                                staticClass: "btn btn-secondary btn-sm",
+                                attrs: {
+                                  href: "/buildings/" + building.id + "/edit"
+                                }
+                              },
+                              [_vm._v("Edit")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-danger btn-sm ml-1",
+                                attrs: { type: "submit" }
+                              },
+                              [_vm._v("Delete")]
+                            )
+                          ],
+                          1
+                        )
                       ])
                     }),
                     0
@@ -416,7 +418,7 @@ var render = function() {
                           staticClass: "nav-link",
                           attrs: { href: "/assemblies" }
                         },
-                        [_vm._v("Articles")]
+                        [_vm._v("Complexe")]
                       )
                     ],
                     1
@@ -432,7 +434,7 @@ var render = function() {
                           staticClass: "nav-link",
                           attrs: { href: "/buildings" }
                         },
-                        [_vm._v("buildings")]
+                        [_vm._v("Cladiri")]
                       )
                     ],
                     1

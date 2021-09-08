@@ -11,10 +11,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <Link href="/assemblies" class="nav-link">Articles</Link>
+                            <Link href="/assemblies" class="nav-link">Complexe</Link>
                         </li>
                         <li class="nav-item">
-                            <Link href="/buildings" class="nav-link">buildings</Link>
+                            <Link href="/buildings" class="nav-link">Cladiri</Link>
                         </li>
                     </ul>
                 </div>

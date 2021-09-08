@@ -422,7 +422,7 @@ var render = function() {
                           staticClass: "nav-link",
                           attrs: { href: "/assemblies" }
                         },
-                        [_vm._v("Articles")]
+                        [_vm._v("Complexe")]
                       )
                     ],
                     1
@@ -438,7 +438,7 @@ var render = function() {
                           staticClass: "nav-link",
                           attrs: { href: "/buildings" }
                         },
-                        [_vm._v("buildings")]
+                        [_vm._v("Cladiri")]
                       )
                     ],
                     1

@@ -24,7 +24,7 @@
                                 <td>{{ building.assembly.name }}</td>
                                 <td>{{ building.no_floors }}</td>
                                 <td class="row mx-auto"> 
-                                    <a href="#" class="btn btn-secondary btn-sm">Edit</a>                                    
+                                    <Link :href="`/buildings/${building.id}/edit`" class="btn btn-secondary btn-sm">Edit</Link>                                    
                                     <button type="submit" class="btn btn-danger btn-sm ml-1">Delete</button>
                                 </td>
                             </tr>
@@ -48,11 +48,8 @@ export default {
     props: {
         buildings: []
     },
-    data() {
-        return {
-            message: ''
-        }
-    },
+    
+    
     
 }
 </script>

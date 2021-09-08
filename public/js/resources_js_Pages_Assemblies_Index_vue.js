@@ -50,12 +50,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 
 
 
@@ -301,85 +295,66 @@ var render = function() {
               [_vm._v("Creeare complexe")]
             ),
             _vm._v(" "),
-            _vm.assemblies.length
-              ? _c("table", { staticClass: "table" }, [
-                  _c("thead", { staticClass: "thead-light" }, [
-                    _c("tr", [
-                      _c("th", { attrs: { scope: "col" } }, [_vm._v("#")]),
-                      _vm._v(" "),
-                      _c("th", { attrs: { scope: "col" } }, [_vm._v("Numele")]),
-                      _vm._v(" "),
-                      _c("th", { attrs: { scope: "col" } }, [_vm._v("Adresa")]),
-                      _vm._v(" "),
-                      _c("th", { attrs: { scope: "col" } })
-                    ])
-                  ]),
+            _c("table", { staticClass: "table" }, [
+              _c("thead", { staticClass: "thead-light" }, [
+                _c("tr", [
+                  _c("th", { attrs: { scope: "col" } }, [_vm._v("#")]),
                   _vm._v(" "),
-                  _c(
-                    "tbody",
-                    _vm._l(_vm.assemblies, function(assembly) {
-                      return _c("tr", { key: assembly.id }, [
-                        _c("td", [_vm._v(_vm._s(assembly.id))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(assembly.name))]),
-                        _vm._v(" "),
-                        _c("td", [_vm._v(_vm._s(assembly.address))]),
+                  _c("th", { attrs: { scope: "col" } }, [_vm._v("Numele")]),
+                  _vm._v(" "),
+                  _c("th", { attrs: { scope: "col" } }, [_vm._v("Adresa")]),
+                  _vm._v(" "),
+                  _c("th", { attrs: { scope: "col" } })
+                ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "tbody",
+                _vm._l(_vm.assemblies, function(assembly) {
+                  return _c("tr", { key: assembly.id }, [
+                    _c("td", [_vm._v(_vm._s(assembly.id))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(assembly.name))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(assembly.address))]),
+                    _vm._v(" "),
+                    _c(
+                      "td",
+                      { staticClass: "row mx-auto" },
+                      [
+                        _c(
+                          "Link",
+                          {
+                            staticClass: "btn btn-secondary btn-sm",
+                            attrs: {
+                              href: "/assemblies/" + assembly.id + "/edit"
+                            }
+                          },
+                          [_vm._v("Edit")]
+                        ),
                         _vm._v(" "),
                         _c(
-                          "td",
-                          { staticClass: "row mx-auto" },
-                          [
-                            _c(
-                              "Link",
-                              {
-                                staticClass: "btn btn-secondary btn-sm",
-                                attrs: {
-                                  href: "/assemblies/" + assembly.id + "/edit"
-                                }
-                              },
-                              [_vm._v("Edit")]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "button",
-                              {
-                                staticClass: "btn btn-danger btn-sm ml-1",
-                                attrs: { type: "submit" },
-                                on: {
-                                  click: function($event) {
-                                    $event.preventDefault()
-                                    return _vm.submit("" + assembly.id)
-                                  }
-                                }
-                              },
-                              [_vm._v("Delete")]
-                            )
-                          ],
-                          1
+                          "button",
+                          {
+                            staticClass: "btn btn-danger btn-sm ml-1",
+                            attrs: { type: "submit" },
+                            on: {
+                              click: function($event) {
+                                $event.preventDefault()
+                                return _vm.submit("" + assembly.id)
+                              }
+                            }
+                          },
+                          [_vm._v("Delete")]
                         )
-                      ])
-                    }),
-                    0
-                  )
-                ])
-              : _c("div", { staticClass: "text-center" }, [
-                  _c("h5", [_vm._v("No Categories Yet!")]),
-                  _vm._v(" "),
-                  _c(
-                    "p",
-                    [
-                      _c(
-                        "Link",
-                        {
-                          staticClass: "btn btn-primary",
-                          attrs: { href: "/assemblies/create" }
-                        },
-                        [_vm._v("Creare Complex")]
-                      )
-                    ],
-                    1
-                  )
-                ])
+                      ],
+                      1
+                    )
+                  ])
+                }),
+                0
+              )
+            ])
           ],
           1
         )
@@ -440,7 +415,7 @@ var render = function() {
                           staticClass: "nav-link",
                           attrs: { href: "/assemblies" }
                         },
-                        [_vm._v("Articles")]
+                        [_vm._v("Complexe")]
                       )
                     ],
                     1
@@ -456,7 +431,7 @@ var render = function() {
                           staticClass: "nav-link",
                           attrs: { href: "/buildings" }
                         },
-                        [_vm._v("buildings")]
+                        [_vm._v("Cladiri")]
                       )
                     ],
                     1

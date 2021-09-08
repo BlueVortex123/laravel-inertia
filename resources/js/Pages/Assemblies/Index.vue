@@ -7,7 +7,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-9">
                     <Link href="/assemblies/create" class="button btn-primary btn-sm float-md-right">Creeare complexe</Link>
-                    <table class="table" v-if="assemblies.length">
+                    <table class="table">
                         <thead class="thead-light">
                             <tr>
                                 <th scope="col">#</th>
@@ -28,12 +28,6 @@
                             </tr>
                         </tbody>
                     </table>
-                    <div class="text-center" v-else>
-                        <h5>No Categories Yet!</h5>
-                        <p>
-                            <Link class="btn btn-primary" href="/assemblies/create">Creare Complex</Link>
-                        </p>
-                    </div>
                 </div>
             </div>
         </div>

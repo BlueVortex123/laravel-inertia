@@ -35,9 +35,9 @@ class BuildingController extends Controller
         return Inertia::render('Buildings/Create', [
             'assemblies' => $assemblies
         ]);
-
+        
     }
-
+    
     /**
      * Store a newly created resource in storage.
      *
@@ -50,36 +50,42 @@ class BuildingController extends Controller
             'name' => 'bail|required|string|min:1|max:255',
             'no_floors' => 'bail|required|string|min:1|max:255',
             'assembly_id' => 'exists:assemblies,id|required'
-        ]);
+            ]);
+            
+            $buildings = new Building($validatedData);
+            $buildings->save();
+            
+            return redirect()->route('buildings.index');
+            
+        }
+        
+        /**
+         * Display the specified resource.
+         *
+         * @param  \App\Models\Building  $building
+         * @return \Illuminate\Http\Response
+         */
+        public function show(Building $building)
+        {
+            //
+        }
+        
+        /**
+         * Show the form for editing the specified resource.
+         *
+         * @param  \App\Models\Building  $building
+         * @return \Illuminate\Http\Response
+         */
+        public function edit(Building $building)
+        {
 
-        $buildings = new Building($validatedData);
-        $buildings->save();
-
-        return redirect()->route('buildings.index');
-
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Building  $building
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Building $building)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Building  $building
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Building $building)
-    {
-        //
-    }
+            $assemblies = Assembly::with('buildings')->get();
+            
+            return Inertia::render('Buildings/Edit', [
+                'building' => $building,
+                'assemblies' => $assemblies,
+            ]);
+        }
 
     /**
      * Update the specified resource in storage.
