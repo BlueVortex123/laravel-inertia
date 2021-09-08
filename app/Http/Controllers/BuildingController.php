@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Assembly;
 use App\Models\Building;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
@@ -29,7 +30,12 @@ class BuildingController extends Controller
      */
     public function create()
     {
-        //
+        $assemblies = Assembly::with('buildings')->get();
+        
+        return Inertia::render('Buildings/Create', [
+            'assemblies' => $assemblies
+        ]);
+
     }
 
     /**
@@ -40,7 +46,17 @@ class BuildingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => 'bail|required|string|min:1|max:255',
+            'no_floors' => 'bail|required|string|min:1|max:255',
+            'assembly_id' => 'exists:assemblies,id|required'
+        ]);
+
+        $buildings = new Building($validatedData);
+        $buildings->save();
+
+        return redirect()->route('buildings.index');
+
     }
 
     /**

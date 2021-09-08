@@ -12,7 +12,7 @@ class Building extends Model
 
     public function assembly()
     {
-        return $this->belongsTo(Assembly::class);
+        return $this->belongsTo(Assembly::class,'assembly_id');
     }
     
 }
